@@ -1,7 +1,6 @@
 # Table of contents
 
-* [Markdown](README.md)
-* [Docker](docker/README.md)
+* [Docker](README.md)
   * [Docker Engine](docker/install-docker.md)
   * [NVIDIA Container](docker/nvidia-container.md)
 * [Monitor](monitor/README.md)
@@ -20,3 +19,4 @@
 * [Raspberry Pi](raspberry-pi/README.md)
   * [dns-server](raspberry-pi/dns-server.md)
   * [Raspberry Imager](raspberry-pi/raspberry-imager.md)
+* [Markdown](<README (1).md>)
