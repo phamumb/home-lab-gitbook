@@ -10,6 +10,7 @@
 * [Plex Server](plex-server/README.md)
   * [Plex Media Server](plex-server/setup.md)
   * [Swizzin](plex-server/swizzin.md)
+  * [GPU Acceleration Setup](plex-server/gpu-acceleration-setup.md)
 * [RAID Array](raid-array/README.md)
   * [Adding a Spare Device to an Array](raid-array/add-device.md)
   * [How To Create RAID Arrays with mdadm on Ubuntu 16.04](raid-array/create-raid-array.md)
@@ -19,4 +20,4 @@
 * [Raspberry Pi](raspberry-pi/README.md)
   * [dns-server](raspberry-pi/dns-server.md)
   * [Raspberry Imager](raspberry-pi/raspberry-imager.md)
-* [Markdown](<README (1).md>)
+* [Markdown](README.md)
