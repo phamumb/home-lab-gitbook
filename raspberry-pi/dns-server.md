@@ -1,4 +1,10 @@
-# dns-server
+---
+description: Setting up DNS server run on Raspberry pi Zero 2 W
+---
+
+# DNS Server
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Dnsmasq\_icon.svg/1200px-Dnsmasq\_icon.svg.png)
 
 ### Introduction
 

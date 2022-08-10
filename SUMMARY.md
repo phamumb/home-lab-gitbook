@@ -18,6 +18,6 @@
   * [Increasing the Number of Active Devices in an Array](raid-array/increase-devices.md)
   * [Removing a Device from an Array](raid-array/removing-device.md)
 * [Raspberry Pi](raspberry-pi/README.md)
-  * [dns-server](raspberry-pi/dns-server.md)
+  * [DNS Server](raspberry-pi/dns-server.md)
   * [Raspberry Imager](raspberry-pi/raspberry-imager.md)
 * [Markdown](README.md)
