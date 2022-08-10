@@ -178,7 +178,7 @@ services:
 
 ```
 
-### Plex Media Server
+## Plex Media Server
 
 Create and run docker-compose file below to bring up plex server
 
