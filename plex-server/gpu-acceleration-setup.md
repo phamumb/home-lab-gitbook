@@ -1,5 +1,8 @@
 ---
 description: Guideline to setup Plex Hardware Acceleration function
+cover: >-
+  https://www.hardwaretimes.com/wp-content/uploads/2019/11/nvidia-eye-siggraph-2018.jpg
+coverY: 0
 ---
 
 # GPU Acceleration Setup

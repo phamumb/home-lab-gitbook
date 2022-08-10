@@ -2,6 +2,7 @@
 description: >-
   Instructions and guideline showing setup a Plex media server, services
   automation
+cover: https://cdn.wallpapersafari.com/44/94/zZvlng.jpg
 coverY: 0
 ---
 

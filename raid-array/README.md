@@ -1,2 +1,6 @@
-# raid-array
+---
+coverY: 0
+---
+
+# RAID Array
 
