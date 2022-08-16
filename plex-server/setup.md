@@ -18,6 +18,16 @@ coverY: 0
 * [RAID Array Level 5](https://github.com/phamumb/home-lab-docsify/blob/main/docs/plex-server/raid-array/create-raid-array.md)
 * [PURE VPN](https://purevpn.com)
 
+### Setting up Environment
+
+* Modify the `~/.bashrc` to add `MEDIA_SERVER_PATH` permanently
+
+```
+nano ~/.bashrc
+#add lines at the bottom of the file:
+    export MEDIA_SERVER_PATH=/mnt/mnt (Depends on how you mount your RAID array location)
+```
+
 ## Download Clients
 
 ### SABNzbd
