@@ -82,3 +82,14 @@ sudo systemctl status dnsmasq
 ```
 
 The status shows as `active (running)`, indicating the Raspberry Pi is running as a DNS server:
+
+The **Dnsmasq** reads all the DNS hosts and names from the **/etc/hosts** file, so add your DNS hosts IP addresses and name pairs as shown.
+
+```
+127.0.0.1       dnsmasq
+192.168.56.10 	dnsmasq 
+192.168.56.1   	gateway
+192.168.56.100	maas-controller 
+192.168.56.20 	nagios
+192.168.56.25 	webserver1
+```
