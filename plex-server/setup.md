@@ -25,7 +25,7 @@ coverY: 0
 ```
 nano ~/.bashrc
 #add lines at the bottom of the file:
-    export MEDIA_SERVER_PATH=/mnt/mnt (Depends on how you mount your RAID array location)
+    export MEDIA_SERVER_PATH=<YOUR_MOUNT_PATH> (Depends on how you mount your RAID array location)
 ```
 
 ## Download Clients
@@ -46,9 +46,9 @@ services:
       - PGID=1000
       - TZ=America/Newyork
     volumes:
-      - /path/to/data:/config
-      - /path/to/downloads:/downloads #optional
-      - /path/to/incomplete/downloads:/incomplete-downloads #optional
+      - ${MEDIA_SERVER_PATH}/configs/sabnzbd:/config
+      - ${MEDIA_SERVER_PATH}/downloads:/downloads #optional
+      - ${MEDIA_SERVER_PATH}/downloads/incomplete:/incomplete-downloads #optional
     restart: unless-stopped
 ```
 
@@ -73,8 +73,8 @@ services:
         container_name: transmission
         network_mode: host
         volumes:
-            - /config/transmission:/config
-            - ${PLEX_PATH}/data/downloads/complete:/downloads
+            - ${MEDIA_SERVER_PATH}/configs/transmission:/config
+            - ${MEDIA_SERVER_PATH}/downloads/transmission:/downloads/transmission
         env_file:
             - ./config.env
         environment:
@@ -82,7 +82,7 @@ services:
             - PGID=0
             - CREATE_TUN_DEVICE=true
             - WEBPROXY_ENABLED=false
-            - TRANSMISSION_DOWNLOAD_DIR=/downloads
+            - TRANSMISSION_DOWNLOAD_DIR=/downloads/transmission
             - TRANSMISSION_IDLE_SEEDING_LIMIT_ENABLED=true
             - TRANSMISSION_SEED_QUEUE_ENABLED=true
             - TRANSMISSION_INCOMPLETE_DIR_ENABLED=false
@@ -98,25 +98,23 @@ services:
 
 ## Indexers
 
-### Jackett
+### Prowlarr
 
 ```
-    ---
-    version: "2.1"
-    services:
-      jackett:
-        image: lscr.io/linuxserver/jackett:latest
-        container_name: jackett
-        network_mode: host
-        environment:
-          - PUID=1000
-          - PGID=1000
-          - TZ=America/Newyork
-          - AUTO_UPDATE=true #optional
-        volumes:
-          - <path to data>:/config
-          - <path to blackhole>:/downloads
-        restart: unless-stopped
+---
+version: "2.1"
+services:
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:develop
+    container_name: prowlarr
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=America/New_York
+    volumes:
+      - ${MEDIA_SERVER_PATH}/configs/prowlarr:/config
+    network_mode: host
+    restart: always
 ```
 
 ### NZBGeek
@@ -151,15 +149,15 @@ version: "2.1"
 services:
   radarr:
     image: <IMAGE>
-    container_name: radarr
+    container_name: <SERVICE_NAME>
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=America/Newyork
     volumes:
-      - /path/to/data:/config
-      - /path/to/movies:/movies #optional
-      - /path/to/downloadclient-downloads:/downloads #optional
+      - ${MEDIA_SERVER_PATH}/configs/<SERVICE_NAME>:/config
+      - ${MEDIA_SERVER_PATH}/media:/movies #optional
+      - ${MEDIA_SERVER_PATH}/downloads:/downloads #optional
     network_mode: host
     restart: unless-stopped
 ```
@@ -182,7 +180,7 @@ services:
       - PGID=1000
       - TZ=America/New_York
     volumes:
-      - /path/to/appdata/config:/config
+      - ${MEDIA_SERVER_PATH}/configs/overseerr:/config
     ports:
       - 5055:5055
     restart: unless-stopped
@@ -208,8 +206,8 @@ services:
       - NVIDIA_DRIVER_CAPABILITIES=all
       - NVIDIA_VISIBLE_DEVICES=all
     volumes:
-      - /config/plex:/config
-      - /media:/media
+      - ${MEDIA_SERVER_PATH}/config/plex:/config
+      - ${MEDIA_SERVER_PATH}/media:/media
     runtime: nvidia
     restart: unless-stopped
 
