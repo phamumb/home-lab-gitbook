@@ -1,6 +1,29 @@
+---
+description: >-
+  It is possible to grow an array by increasing the number of active devices
+  within the assembly. The exact procedure depends slightly on the RAID level
+  you are using.
+---
+
 # Increasing the Number of Active Devices in an Array
 
-It is possible to grow an array by increasing the number of active devices within the assembly. The exact procedure depends slightly on the RAID level you are using.
+### Preparing device
+
+Format the new disk with ext4 following command
+
+```
+sudo mkfs.ext4 /dev/sd[disk]
+```
+
+Create partition 1 for new disk, because the structure of new disk different
+
+```
+gdisk /dev/sd[disk]
+command: n
+<enter> all default settings
+command: w
+<enter> all default settings
+```
 
 ## With RAID 1 or 10
 

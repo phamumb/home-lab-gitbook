@@ -12,6 +12,7 @@
   * [Swizzin](plex-server/swizzin.md)
   * [GPU Acceleration Setup](plex-server/gpu-acceleration-setup.md)
 * [RAID Array](raid-array/README.md)
+  * [How To List Disks on Linux](raid-array/how-to-list-disks-on-linux.md)
   * [Adding a Spare Device to an Array](raid-array/add-device.md)
   * [How To Create RAID Arrays with mdadm on Ubuntu 16.04](raid-array/create-raid-array.md)
   * [Deleting an Array](raid-array/deleting-array.md)
@@ -21,3 +22,5 @@
   * [DNS Server](raspberry-pi/dns-server.md)
   * [Raspberry Imager](raspberry-pi/raspberry-imager.md)
 * [Markdown](<README (1).md>)
+* [Ubuntu Server 20.04 LTS](ubuntu-server-20.04-lts/README.md)
+  * [Ubuntu: Extend your default LVM space](ubuntu-server-20.04-lts/ubuntu-extend-your-default-lvm-space.md)
