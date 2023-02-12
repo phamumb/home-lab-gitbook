@@ -22,6 +22,7 @@
   * [DNS Server](raspberry-pi/dns-server.md)
   * [Raspberry Imager](raspberry-pi/raspberry-imager.md)
   * [Increasing SWAP on a Raspberry Pi](raspberry-pi/increasing-swap-on-a-raspberry-pi.md)
+  * [PiVPN](raspberry-pi/pivpn.md)
 * [Markdown](<README (1).md>)
 * [Ubuntu Server 20.04 LTS](ubuntu-server-20.04-lts/README.md)
   * [Ubuntu: Extend your default LVM space](ubuntu-server-20.04-lts/ubuntu-extend-your-default-lvm-space.md)
