@@ -71,7 +71,7 @@ sudo docker run --rm --gpus all nvidia/cuda:11.0.3-base-ubuntu20.04 nvidia-smi
 After running all command above and installed all package, the final result should display as below
 
 ```
-idia-smi
+watch -n0.1 nvidia-smi
 
 # Output
 +-----------------------------------------------------------------------------+
